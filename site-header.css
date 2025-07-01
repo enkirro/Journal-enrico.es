@@ -1,0 +1,53 @@
+<style>
+  /* Establece el color de fondo general del sitio y el color del texto */
+  body {
+    background-color: #15171a;
+    color: #ffffff;
+  }
+
+  /* Aplica un fondo lila oscuro solo al header principal del sitio (la barra superior) */
+  .site-header,
+  header.gh-head,
+  .gh-head-inner,
+  .gh-nav {
+    background-color: #1e182b;
+    color: #ffffff;
+  }
+
+  /* Asegura que el encabezado de los artículos no tenga fondo lila y mantenga el fondo del body */
+  .gh-article-header {
+    background-color: transparent;
+    color: #ffffff;
+  }
+
+  /* Quita cualquier fondo de los títulos y los pone en blanco */
+  h1, h2, h3, h4, h5, h6 {
+    background-color: transparent;
+    color: #ffffff;
+  }
+
+  /* Define el color del texto en párrafos, listas, spans y enlaces */
+  p, span, li, a {
+    color: #ffffff;
+  }
+
+  /* Color de los enlaces al pasar el ratón (hover) — lila claro como acento */
+  a:hover {
+    color: #c792ea;
+  }
+
+  /* Color blanco para el texto de los extractos de artículo */
+  .gh-article-excerpt {
+    color: #ffffff;
+  }
+
+  /* Estilo para el código embedded*/
+  code, code * {
+  background-color: #2d2d2d !important;
+  color: #ffffff !important;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.95em;
+  }
+</style>
