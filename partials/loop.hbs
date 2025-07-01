@@ -1,20 +1,28 @@
 <article class="gh-card {{post_class}}">
     <a class="gh-card-link" href="{{url}}">
-        <header class="gh-card-header">
-            <h2 class="gh-card-title">{{title}}</h2>
-        </header>
-
-        <div class="gh-card-excerpt">{{excerpt}}</div>
-
-        <footer class="gh-card-meta">
-            <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
-            <span class="gh-card-duration">{{reading_time}}</span>
-            {{#if @site.comments_enabled}}
-                {{comment_count class="gh-card-comments"}}
+        <div class="gh-card-content-wrapper">
+            {{#if feature_image}}
+                <img class="gh-card-image" src="{{feature_image}}" alt="{{title}}">
             {{/if}}
-            {{^has visibility="public"}}
-                {{> icons/star}}
-            {{/has}}
-        </footer>
+
+            <div class="gh-card-content">
+                <header class="gh-card-header">
+                    <h2 class="gh-card-title">{{title}}</h2>
+                </header>
+
+                <div class="gh-card-excerpt">{{excerpt}}</div>
+
+                <footer class="gh-card-meta">
+                    <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD/MM/YYYY"}}</time>
+                    <span class="gh-card-duration">{{reading_time}}</span>
+                    {{#if @site.comments_enabled}}
+                        {{comment_count class="gh-card-comments"}}
+                    {{/if}}
+                    {{^has visibility="public"}}
+                        {{> icons/star}}
+                    {{/has}}
+                </footer>
+            </div>
+        </div>
     </a>
 </article>

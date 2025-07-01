@@ -8,7 +8,7 @@
                     <a class="gh-card-link" href="{{url}}">
                         <header class="gh-card-header">
                             <div class="gh-article-meta">
-                                <span class="gh-card-date">Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time></span>
+                                <span class="gh-card-date">Latest — <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD/MM/YYYY"}}</time></span>
                             </div>
                             <h2 class="gh-article-title gh-card-title">{{title}}</h2>
                         </header>
@@ -31,7 +31,7 @@
 
         <div class="gh-wrapper">
             <section class="gh-section">
-                <h2 class="gh-section-title">More issues</h2>
+                <h2 class="gh-section-title">Más posts</h2>
 
                 <div class="gh-feed">
                     {{^is "paged"}}
@@ -46,10 +46,10 @@
                 </div>
 
                 {{#match posts.length "=" 1}}
-                    Additional issues will be published soon.
+                    Additional Post will be published soon.
                 {{/match}}
 
-                <button class="gh-loadmore gh-btn">Load more issues</button>
+                <button class="gh-loadmore gh-btn">Cargar más posts</button>
             </section>
 
             <aside class="gh-sidebar">
@@ -74,7 +74,7 @@
                         {{^if @member.paid}}
                             <div class="gh-signup">
                                 {{^if @member}}
-                                    <p class="gh-signup-description">Sign up now to get access to the library of members-only issues.</p>
+                                    <p class="gh-signup-description">Sign up now to get access to the library of members-only Post.</p>
 
                                     <a class="gh-subscribe-input" href="#/portal/signup" data-portal="signup">
                                         <div class="gh-subscribe-input-text">
@@ -110,14 +110,14 @@
 
                 {{#get "tags" include="count.posts" limit="all" as |topic|}}
                     <section class="gh-section">
-                        <h3 class="gh-section-title">Topics</h3>
+                        <h3 class="gh-section-title">Categorías</h3>
 
                         <div class="gh-topic">
                             {{#foreach topic}}
                                 <a class="gh-topic-item" href="{{url}}">
                                     <h3 class="gh-topic-name">{{name}}</h3>
                                     <span class="gh-topic-count">
-                                        {{plural count.posts empty="0 issues" singular="% issue" plural="% issues"}}
+                                        {{plural count.posts empty="0 Posts" singular="% Post" plural="% Posts"}}
                                     </span>
                                 </a>
                             {{/foreach}}

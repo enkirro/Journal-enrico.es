@@ -1,0 +1,16 @@
+.gh-card-content-wrapper {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.gh-card-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.gh-card-content {
+    flex: 1;
+}
